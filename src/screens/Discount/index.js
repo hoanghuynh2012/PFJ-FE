@@ -37,7 +37,7 @@ const DATA = [
   {
     id: 2,
     title: 'Ficus',
-    info: '	Ficus ( or ) is a genus of about 850 species of woody trees, shrubs, vines, epiphytes and hemiepiphytes in the family Moraceae. Collectively known as fig trees or figs, they are native throughout the tropics with a few species extending into the semi-warm temperate zone. The common fig (F. carica) is a temperate species native to southwest Asia and the Mediterranean region (from Afghanistan to Portugal), which has been widely cultivated from ancient times for its fruit, also referred to as figs.\
+    info: 'Ficus ( or ) is a genus of about 850 species of woody trees, shrubs, vines, epiphytes and hemiepiphytes in the family Moraceae. Collectively known as fig trees or figs, they are native throughout the tropics with a few species extending into the semi-warm temperate zone. The common fig (F. carica) is a temperate species native to southwest Asia and the Mediterranean region (from Afghanistan to Portugal), which has been widely cultivated from ancient times for its fruit, also referred to as figs.\
      The fruit of most other species are also edible though they are usually of only local economic importance or eaten as bushfood. However, they are extremely important food resources for wildlife. Figs are also of considerable cultural importance throughout the tropics, both as objects of worship and for their many practical uses.',
     category: 'Bedroom',
     image:
@@ -48,7 +48,7 @@ const DATA = [
   {
     id: 3,
     title: 'Violetta',
-    info: '	Viola is a genus of flowering plants in the violet family Violaceae. It is the largest genus in the family, containing between 525 and 600 species. Most species are found in the temperate Northern Hemisphere; however, some are also found in widely divergent areas such as Hawaii, Australasia, and the Andes.\
+    info: 'Viola is a genus of flowering plants in the violet family Violaceae. It is the largest genus in the family, containing between 525 and 600 species. Most species are found in the temperate Northern Hemisphere; however, some are also found in widely divergent areas such as Hawaii, Australasia, and the Andes.\
     Some Viola species are perennial plants, some are annual plants, and a few are small shrubs. Many species, varieties and cultivars are grown in gardens for their ornamental flowers. In horticulture the term pansy is normally used for those multi-colored, large-flowered cultivars which are raised annually or biennially from seed and used extensively in bedding. The terms viola and violet are normally reserved for small-flowered annuals or perennials, including the wild species.',
     category: 'Bathroom',
     image:
