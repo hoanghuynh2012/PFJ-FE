@@ -6,7 +6,7 @@ const Index = ({navigation}) => {
     const wait = () =>
       setTimeout(() => {
         navigation.replace('BottomTab');
-      }, 5000);
+      }, 3000);
     wait();
     return () => {
       clearTimeout(wait);
