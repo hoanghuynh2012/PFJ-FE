@@ -14,7 +14,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {COLOR} from '../../assets/colors';
-
+import styles from './style';
 const DATA = [
   {
     id: 1,
@@ -152,15 +152,15 @@ const ProductDetail = ({navigation}) => {
           }}>
           <View>
             <Text style={styles.titleBody}>Type</Text>
-            <Text style={{fontSize: 22, color: COLOR.BLACK}}>{item.type}</Text>
+            <Text style={{fontSize: 20, color: COLOR.BLACK}}>{item.type}</Text>
           </View>
           <View>
             <Text style={styles.titleBody}>Size</Text>
-            <Text style={{fontSize: 22, color: COLOR.BLACK}}>{item.size}</Text>
+            <Text style={{fontSize: 20, color: COLOR.BLACK}}>{item.size}</Text>
           </View>
           <View>
             <Text style={styles.titleBody}>Level</Text>
-            <Text style={{fontSize: 22, color: COLOR.BLACK}}>{item.level}</Text>
+            <Text style={{fontSize: 20, color: COLOR.BLACK}}>{item.level}</Text>
           </View>
           <View>
             <Text
@@ -210,22 +210,9 @@ const ProductDetail = ({navigation}) => {
           showsHorizontalScrollIndicator={false}
           data={DATA_ALSO}
           renderItem={renderItem}></FlatList>
-        <View
-          style={{
-            flexDirection: 'row',
-            height: '10%',
-            justifyContent: 'space-around',
-            marginTop: 8,
-            alignItems: 'center',
-          }}>
+        <View style={styles.viewButton}>
           <TouchableOpacity
-            style={{
-              backgroundColor: COLOR.DARK,
-              width: '10%',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: 10,
-            }}
+            style={styles.button}
             onPress={() => changeQuantity(2)}>
             <Text style={{fontSize: 22, fontFamily: 'SF-Pro-Display-Semibold'}}>
               -
@@ -235,27 +222,13 @@ const ProductDetail = ({navigation}) => {
             {quantity}
           </Text>
           <TouchableOpacity
-            style={{
-              backgroundColor: COLOR.DARK,
-              width: '10%',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: 10,
-            }}
+            style={styles.button}
             onPress={() => changeQuantity(1)}>
             <Text style={{fontSize: 22, fontFamily: 'SF-Pro-Display-Semibold'}}>
               +
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              backgroundColor: COLOR.GREEN,
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '50%',
-              height: '100%',
-              borderRadius: 10,
-            }}>
+          <TouchableOpacity style={styles.buttonAdd}>
             <Text style={{fontSize: 16, fontFamily: 'SFProText-Medium'}}>
               Add to cart
             </Text>
@@ -292,40 +265,3 @@ const ProductDetail = ({navigation}) => {
 };
 
 export default ProductDetail;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLOR.WHITE,
-  },
-  viewItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    backgroundColor: COLOR.DARK,
-    borderRadius: 10,
-  },
-  textItem: {
-    fontSize: 16,
-    margin: 8,
-    fontFamily: 'SFProText-Medium',
-    color: COLOR.WHITE,
-  },
-  itemImage: {width: 150, height: 150},
-  titleBody: {
-    fontSize: 18,
-    color: COLOR.DARK,
-    fontFamily: 'SFProText-Medium',
-  },
-  content: {
-    marginLeft: 16,
-    marginRight: 16,
-    fontFamily: 'SFProText-Medium',
-  },
-  more: {
-    color: COLOR.GREEN,
-    marginLeft: 16,
-    marginRight: 16,
-    fontFamily: 'SFProText-Medium',
-  },
-});

@@ -1,12 +1,6 @@
 import React, {useState} from 'react';
-import {
-  StyleSheet,
-  FlatList,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-} from 'react-native';
+import {FlatList, Text, View, TouchableOpacity, Image} from 'react-native';
+import styles from './style';
 import {COLOR} from '../../assets/colors';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Search from '../../components/Search';
@@ -175,42 +169,3 @@ const Index = ({navigation}) => {
 };
 
 export default Index;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: COLOR.WHITE,
-  },
-  viewItemCategory: {
-    marginLeft: 16,
-    marginRight: 8,
-  },
-  textItemCategory: {
-    fontSize: 18,
-    fontFamily: 'SF-Pro-Display-Bold',
-  },
-  viewItemPlants: {
-    flex: 1,
-    width: '100%',
-    flexDirection: 'row',
-    margin: 16,
-    backgroundColor: '#ffff',
-  },
-  imageItem: {
-    width: 150,
-    height: 150,
-    resizeMode: 'stretch',
-  },
-  titleItem: {
-    fontSize: 18,
-    color: COLOR.BLACK,
-    fontFamily: 'SFProText-Medium',
-    marginBottom: 8,
-  },
-  contentItem: {
-    flexDirection: 'column',
-    marginLeft: 8,
-    width: 220,
-  },
-});

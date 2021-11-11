@@ -19,9 +19,15 @@ const Header = props => {
       )}
       <Text style={styles.title}>{title}</Text>
       {right ? (
-        <TouchableOpacity onPress={() => changeHear()}>
-          <AntDesign name="heart" size={25} color={colorHear} />
-        </TouchableOpacity>
+        title !== 'Profile' ? (
+          <TouchableOpacity onPress={() => changeHear()}>
+            <AntDesign name="heart" size={25} color={colorHear} />
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity onPress={() => navigation.navigate('EditProfile')}>
+            <AntDesign name="edit" size={25} color={colorHear} />
+          </TouchableOpacity>
+        )
       ) : (
         <View></View>
       )}
