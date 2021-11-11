@@ -58,7 +58,6 @@ const Index = ({navigation}) => {
   const changeHear = id => {
     setIndexItem(id);
     setColorHear(colorHear === COLOR.RED ? COLOR.BLACK : COLOR.RED);
-    console.log(colorHear, indexItem);
   };
   const renderItemPlants = ({item}) => <ItemPlants item={item} />;
   const ItemPlants = ({item}) => (

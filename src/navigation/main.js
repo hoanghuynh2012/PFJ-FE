@@ -6,13 +6,14 @@ import Bootsplash from '../screens/Bootsplash/index';
 import BottomTab from './bottomtab';
 import ProductDetail from '../screens/ProductDetail/index';
 import EditProfile from '../screens/EditProfile/index';
+import CheckOut from '../screens/Checkout/index';
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="BottomTab"
+        initialRouteName="Bootsplash"
         screenOptions={{
           headerShown: false,
         }}>
@@ -20,6 +21,7 @@ function App() {
         <Stack.Screen name="BottomTab" component={BottomTab} />
         <Stack.Screen name="ProductDetail" component={ProductDetail} />
         <Stack.Screen name="EditProfile" component={EditProfile} />
+        <Stack.Screen name="CheckOut" component={CheckOut} />
       </Stack.Navigator>
     </NavigationContainer>
   );

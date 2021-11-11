@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-  StyleSheet,
-  Text,
-  Image,
-  TouchableOpacity,
-  FlatList,
-  View,
-} from 'react-native';
+import {Text, Image, TouchableOpacity, FlatList, View} from 'react-native';
 import Header from '../../components/Header';
 import {COLOR} from '../../assets/colors';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -37,7 +30,7 @@ It was traditionally classified in the family Primulaceae, was reclassified in t
     quantity: 1,
   },
 ];
-const Index = () => {
+const Index = ({navigation}) => {
   const [quantity, setQuantity] = useState(DATA[0].quantity);
   const changeQuantity = method => {
     switch (method) {
@@ -128,7 +121,9 @@ const Index = () => {
               $ 145
             </Text>
           </View>
-          <TouchableOpacity style={styles.buttonBuy}>
+          <TouchableOpacity
+            style={styles.buttonBuy}
+            onPress={() => navigation.navigate('CheckOut')}>
             <Text style={styles.textButtonBuy}>Buy</Text>
           </TouchableOpacity>
         </View>
